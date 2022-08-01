@@ -10,18 +10,12 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Image from '../Assets/img1.jpg'
+import LogIn from './LogIn';
 
-const styles = {
-  paperContainer: {
-    backgroundImage: 'url(${Image})'
-  }
-};
 const theme = createTheme({
-
 });
 
-export default function Signup() {
+function Signup() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -32,6 +26,8 @@ export default function Signup() {
   };
 
   return (
+    <> 
+      <h3>Golden Hill</h3>
       <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -104,15 +100,18 @@ export default function Signup() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="LogIn" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>
             </Grid>
           </Box>
         </Box>
-        {/* <Copyright sx={{ mt: 5 }} /> */}
       </Container>
     </ThemeProvider>
+    {/* <LogIn /> */}
+  </>
+
   );
 }
+export default Signup;

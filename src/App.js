@@ -1,10 +1,15 @@
 
+// import { Login } from '@mui/icons-material';
 import './App.css';
-import Signup from './Login/SignUp';
+import SignInSide from './Login/LogIn';
+// import Signup from './Login/SignUp';
 
 function App() {
   return ( 
-    <Signup />
+    <diiv>
+     {/* <Signup /> */}
+     <SignInSide />
+    </diiv>
   );
 }
 
