@@ -1,17 +1,61 @@
 
+import React from 'react';
 // import { Login } from '@mui/icons-material';
+import SideMenu from "../src/Components/Employees/Side";
 import './App.css';
-import PageHeader from './Employees/PageHeader';
-import SignInSide from './Login/LogIn';
-// import Signup from './Login/SignUp';
+import { makeStyles, CssBaseline, createMuiTheme, ThemeProvider } from '@material-ui/core';
+import Header from "../src/Components/Employees/Header";
+import Employees from "../src/Login/Employee";
+
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#333996",
+      light: '#3c44b126'
+    },
+    secondary: {
+      main: "#f83245",
+      light: '#f8324526'
+    },
+    background: {
+      default: "#f4f5fd"
+    },
+  },
+  overrides:{
+    MuiAppBar:{
+      root:{
+        transform:'translateZ(0)'
+      }
+    }
+  },
+  props:{
+    MuiIconButton:{
+      disableRipple:true
+    }
+  }
+})
+
+const useStyles = makeStyles({
+  appMain: {
+    paddingLeft: '320px',
+    width: '100%'
+  }
+})
+
 
 function App() {
+   const classes = useStyles();
   return ( 
-    <diiv>
-     {/* <Signup /> */}
-     <SignInSide />
-     <PageHeader />
-    </diiv>
+    <ThemeProvider theme={theme}>
+      <SideMenu />
+      <div className={classes.appMain}>
+        <Header />
+        
+        <Employees />
+      </div>
+      <CssBaseline />
+    </ThemeProvider>
   );
 }
 

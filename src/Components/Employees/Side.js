@@ -10,7 +10,7 @@ const style = {
         left: '0px',
         width: '320px',
         height: '100%',
-        backgroundColor: '#253053'
+        backgroundColor: '#004d40',
     }
 }
 
