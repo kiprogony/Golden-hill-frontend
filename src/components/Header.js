@@ -43,12 +43,12 @@ export default function Header() {
                     <Grid item sm></Grid>
                     <Grid item>
                         <IconButton>
-                            <Badge badgeContent={4} color="secondary">
+                            <Badge badgeContent={0} color="secondary">
                                 <NotificationsNoneIcon fontSize="small" />
                             </Badge>
                         </IconButton>
                         <IconButton>
-                            <Badge badgeContent={3} color="primary">
+                            <Badge badgeContent={0} color="secondary">
                                 <ChatBubbleOutlineIcon fontSize="small" />
                             </Badge>
                         </IconButton>

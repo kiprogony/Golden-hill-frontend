@@ -38,11 +38,11 @@ export default function EmployeeForm(props) {
         if ('mobile' in fieldValues)
             temp.mobile = fieldValues.mobile.length > 9 ? "" : "Minimum 10 numbers required."
         if ('mobile' in fieldValues)
-            temp.mobile = fieldValues.mobile.length > 9 ? "" : "Minimum 10 numbers required."
+            temp.id_no = fieldValues.id_no.length > 9 ? "" : "Maximum 10 numbers required."
         if ('mobile' in fieldValues)
-            temp.salary = fieldValues.mobile.length > 9 ? "" : "Minimum 10 numbers required."
+            temp.hired_date = fieldValues.hired_date.length > 9 ? "" : "Enter date hired."
         if ('mobile' in fieldValues)
-            temp.mobile = fieldValues.mobile.length > 9 ? "" : "Minimum 10 numbers required."
+            temp.salary = fieldValues.salary.length > 9 ? "" : "Employee salary is required"
         if ('departmentId' in fieldValues)
             temp.departmentId = fieldValues.departmentId.length != 0 ? "" : "This field is required."
         setErrors({
